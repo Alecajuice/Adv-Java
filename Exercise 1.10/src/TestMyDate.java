@@ -22,6 +22,7 @@ public class TestMyDate
 	
 		// MyDate d4 = new MyDate(2099, 11, 31); // Invalid year, month, or day!
 		// MyDate d5 = new MyDate(2011, 2, 29);  // Invalid year, month, or day!
+		
 		MyDate current = new MyDate(2011, 12, 28);
 		while (current.lessThan(new MyDate(2012, 3, 3)))
 		{
