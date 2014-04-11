@@ -125,8 +125,8 @@ public class MyDate
 			{
 				if(day > getDaysInMonth(year, month - 1))
 				{
-					month --;
 					day = getDaysInMonth(year, month - 1);
+					month --;
 				}
 				else
 					month --;
@@ -152,8 +152,8 @@ public class MyDate
 			{
 				if(day > getDaysInMonth(year, month + 1))
 				{
-					month ++;
 					day = getDaysInMonth(year, month + 1);
+					month ++;
 				}
 				else
 				{
@@ -267,6 +267,15 @@ public class MyDate
 	
 	public String toString()
 	{
-		return getDayOfWeek(year, month, day) + " " + day + " " + strMonths[month - 1] + " " + year;
+		return strDays[getDayOfWeek(year, month, day)] + " " + day + " " + strMonths[month - 1] + " " + year;
+	}
+	
+	public boolean lessThan(MyDate another)
+	{
+		if (this.year < another.year || this.year == another.year && this.month < another.month || this.year == another.year && this.month == another.month && this.day < another.day)
+		{
+			return true;
+		}
+		return false;
 	}
 }
