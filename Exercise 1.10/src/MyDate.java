@@ -216,6 +216,18 @@ public class MyDate
 		}
 	}
 	
+	public static int getDaysInMonth(int year, int month)
+	{
+		if(isLeapYear(year) && month == 2)
+		{
+			return 29;
+		}
+		else
+		{
+			return dayInMonths[month - 1];
+		}
+	}
+	
 	public void setDate(int year, int month, int day)
 	{
 		this.year = year;
